@@ -4,10 +4,7 @@ scikit-learn
 pip == 23.2.1
 nltk
 streamlit
-unicodedata
 re
-nltk.util
-nltk.corpus
 matplotlib.pyplot
 plotly.express
 wordcloud
