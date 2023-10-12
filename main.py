@@ -4,7 +4,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 import plotly.express as px
 import streamlit as st
 st.set_page_config(
-    page_title="Twitter Sentiment Analyzer", page_icon="📊", layout="wide"
+    page_title="Review Sentiment Dashboard", page_icon="📊", layout="wide"
 )
 page_bg_img="""
 <style>
