@@ -134,7 +134,7 @@ def make_dashboard(tweet_df, bar_color, wc_color):
             bigram_plot.update_layout(title_font=dict(size=24))
             st.plotly_chart(bigram_plot, theme=None, use_container_width=True)
 make_dashboard(df_selection, bar_color="#54A24B", wc_color="Greens")
-col21, col22 = st.columns([50,50])
+col21, col22 = st.columns([60,40])
 with col21:
     value_counts = df_selection['Keywords_kategori'].value_counts().head(8).reset_index()
     value_counts.columns = ['Category', 'Count']
