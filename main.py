@@ -91,7 +91,7 @@ def plot_sentiment(tweet_df):
         values=sentiment_count.values,
         names=sentiment_count.index,
         hole=0.3,
-        title="<b>Sentiment Distribution</b>",
+        title="<b>Distribusi Sentiment</b>",
         color=sentiment_count.index,
         color_discrete_map={"positif": "#54A24B", "negatif": "red", 'netral':'yellow'},
     )
@@ -122,14 +122,14 @@ def make_dashboard(tweet_df, bar_color, wc_color):
         with col2:
             top_unigram = get_top_n_gram(tweet_df, ngram_range=(1, 1), n=10)
             unigram_plot = plot_n_gram(
-                top_unigram, title="Top 10 Occuring Words", color=bar_color
+                top_unigram, title="Top 10 Kata Kunci Populer", color=bar_color
             )
             unigram_plot.update_layout(title_font=dict(size=24))
             st.plotly_chart(unigram_plot, theme=None, use_container_width=True)
         with col3:
             top_bigram = get_top_n_gram(tweet_df, ngram_range=(2, 2), n=10)
             bigram_plot = plot_n_gram(
-                top_bigram, title="Top 10 Occuring Bigrams", color=bar_color
+                top_bigram, title="Top 10 dua Kata Kunci Populer", color=bar_color
             )
             bigram_plot.update_layout(title_font=dict(size=24))
             st.plotly_chart(bigram_plot, theme=None, use_container_width=True)
