@@ -139,7 +139,7 @@ with col21:
     value_counts = df_selection['Keywords_kategori'].value_counts().head(8).reset_index()
     value_counts.columns = ['Category', 'Count']
     value_counts = value_counts.sort_values(by='Count', ascending=True)
-    fig_topic = px.bar(value_counts, y='Category', x='Count', orientation='h', title='Top Topic Modelling')
+    fig_topic = px.bar(value_counts, y='Category', x='Count', orientation='h', title='Topik Utama dalam Ulasan Sentimen')
     fig_topic.update_layout(title_font=dict(size=24),plot_bgcolor="rgba(0, 0, 0, 0)", paper_bgcolor='rgba(0, 0, 0, 0)')
     fig_topic.update_yaxes(tickfont=dict(color='black'),title_text=None)
     fig_topic.update_xaxes(tickfont=dict(color='black'),showline=True, title_text=None,showgrid=True, gridwidth=1, gridcolor='white')
@@ -155,6 +155,6 @@ with col22:
                 return "background-color: red; color: white"
     df_random = df_selection.sample(frac=1).reset_index()
     st.dataframe(
-    df_random[["status", "Text_clean"]].style.applymap(
+    df_random[["status", "Text"]].style.applymap(
                     sentiment_color, subset=["status"]
                 ))
