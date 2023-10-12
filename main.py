@@ -29,7 +29,7 @@ adjust_top_pad = """
 st.markdown(adjust_top_pad, unsafe_allow_html=True)
 st.title(":bar_chart: Review Sentiment Dashboard")
 df = pd.read_csv('data_deploy.csv')
-atas2, atas3,atas1 = st.columns([20,25,45])
+atas2, atas3,atas1 = st.columns([25,25,50])
 with atas2:
     sumber = st.multiselect(
         "Pilih Sumber:",
