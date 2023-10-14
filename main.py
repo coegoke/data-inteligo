@@ -9,7 +9,7 @@ st.set_page_config(
 page_bg_img="""
 <style>
 [data-testid="stAppViewContainer"] > .main{
-background-image: url("https://i.pinimg.com/564x/26/3c/93/263c93e03a3d1c3de47dd7c882f93cc8.jpg");
+background-image: url("https://i.pinimg.com/736x/07/46/a8/0746a8d2d2a2107d1dc62210c1f82685.jpg");
 background-size:100%;
 background-position:top;
 background-repeat:no-repeat;
